@@ -15,14 +15,21 @@
   --font-caps: "IM Fell English SC", Georgia, serif;
   --font-body: "EB Garamond", Garamond, Georgia, serif;
 
-  --content: 1720px;
-  /* slim borders; they only widen on very large screens so no gap opens beside the content */
-  --border-w: max(clamp(56px, 8vw, 160px), calc((100vw - var(--content)) / 2));
+  /* Content width is in rem (1720px at the normal 16px root). On screens wider than
+     2040px the root font grows (below), so the whole page scales up to fill the width
+     and the borders stay slim. Below 2040px nothing changes. */
+  --content: 107.5rem;
+  --border-w: clamp(56px, 8vw, 160px);
 }
 
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+/* Wide screens: scale everything up proportionally instead of widening the borders.
+   At exactly 2040px this gives 16px, so there is no jump at the breakpoint. */
+@media (min-width: 2040px) {
+  html { font-size: calc((100vw - 320px) / 107.5); }
+}
 body {
   margin: 0;
   color: var(--ink);
