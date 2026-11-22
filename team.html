@@ -15,32 +15,34 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="frame">
+<div class="page">
 <div class="inner">
 
   <header class="site-header">
     <a class="home-link" href="index.html">Danse Macabre</a>
+    <a class="btn btn-small header-donate" href="https://www.gofundme.com/f/danse-macabre-bringing-this-story-to-life">Donate</a>
     <nav class="site-nav" aria-label="Main">
       <a href="film.html">The Film</a>
       <a href="team.html" aria-current="page">The Team</a>
       <a href="updates.html">Updates</a>
-      <a class="nav-donate" href="https://www.gofundme.com/f/danse-macabre-bringing-this-story-to-life">Donate</a>
+      <a class="btn btn-small nav-donate" href="https://www.gofundme.com/f/danse-macabre-bringing-this-story-to-life">Donate</a>
     </nav>
   </header>
+  <div class="band" role="presentation"></div>
 
   <main>
     <section class="section">
-      <h1 class="section-title">The Cast</h1>
-      <dl class="credits cast">
+      <h1 class="section-title page-title"><span class="pilcrow" aria-hidden="true">&para;</span>The Cast</h1>
+      <dl class="credits">
         <div class="credit"><dt>Isabel</dt><dd>Grace Wagner</dd></div>
         <div class="credit"><dt>Guillaume</dt><dd>Robert Najarian</dd></div>
         <div class="credit"><dt>Father Tobias</dt><dd>Robert Walsh</dd></div>
       </dl>
-      <p class="note" style="margin-top:16px">More cast to be announced.</p>
+      <p class="aside">More cast to be announced.</p>
     </section>
 
     <section class="section">
-      <h2 class="section-title">The Crew</h2>
+      <h2 class="section-title"><span class="pilcrow" aria-hidden="true">&para;</span>The Crew</h2>
       <dl class="credits">
         <div class="credit"><dt>Written &amp; Directed by</dt><dd>Ethan Hewlett</dd></div>
         <div class="credit"><dt>Executive Logistics Producer</dt><dd>Christopher Jesski</dd></div>
@@ -63,21 +65,22 @@
       </dl>
     </section>
 
-    <section class="funding" data-funding aria-label="Fundraising progress">
-      <p class="funding-amount">Already raised <strong data-raised>$4,680</strong></p>
-      <div class="bar" role="progressbar" aria-label="Raised so far" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-        <div class="bar-fill"></div>
+    <section class="funding funding-wide" data-funding aria-label="Fundraising progress">
+      <p class="funding-amount">Already raised <span class="raised" data-raised>$4,680</span> <span class="of">of <span data-goal>$8,000</span></span></p>
+      <div class="bar" role="progressbar" aria-label="Raised so far" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="bar-fill"></div></div>
+      <div class="funding-actions">
+        <a class="btn" href="https://www.gofundme.com/f/danse-macabre-bringing-this-story-to-life">Donate on GoFundMe</a>
+        <p class="funding-meta"><span data-percent>58.5%</span> of the way there</p>
       </div>
-      <p class="funding-meta"><span data-percent></span> of our <span data-goal>$8,000</span> goal</p>
-      <a class="btn" href="https://www.gofundme.com/f/danse-macabre-bringing-this-story-to-life">Donate Now<span class="arrow" aria-hidden="true">&rsaquo;</span></a>
     </section>
   </main>
 
+  <div class="band" role="presentation"></div>
   <footer class="site-footer">
     <p class="footer-title">Danse Macabre</p>
-    <p>An Emerson College senior film &middot; Filming in New Hampshire</p>
-    <p><a href="mailto:Dansemacabre2026@gmail.com">Dansemacabre2026@gmail.com</a> &middot; <a href="https://www.instagram.com/dansemacabre.film/">Instagram @dansemacabre.film</a></p>
-    <p class="credits-art">Border from a 15th-century Book of Hours, public domain.<br>&copy; <span data-year>2026</span> Danse Macabre</p>
+    <p>An Emerson College senior film, filming in New Hampshire</p>
+    <p class="footer-links"><a href="mailto:Dansemacabre2026@gmail.com">Dansemacabre2026@gmail.com</a><a href="https://www.instagram.com/dansemacabre.film/">Instagram @dansemacabre.film</a></p>
+    <p class="art-credits">Border from a 15th-century Book of Hours, public domain.<br>&copy; <span data-year>2026</span> Danse Macabre</p>
   </footer>
 
 </div>
