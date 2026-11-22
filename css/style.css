@@ -15,8 +15,9 @@
   --font-caps: "IM Fell English SC", Georgia, serif;
   --font-body: "EB Garamond", Garamond, Georgia, serif;
 
-  --content: 1180px;
-  --border-w: clamp(56px, calc((100vw - var(--content)) / 2), 340px);
+  --content: 1720px;
+  /* slim borders; they only widen on very large screens so no gap opens beside the content */
+  --border-w: max(clamp(56px, 8vw, 160px), calc((100vw - var(--content)) / 2));
 }
 
 /* ---------- Base ---------- */
@@ -49,7 +50,7 @@ h1, h2, h3 { font-weight: 400; }
   position: absolute;
   top: 0; bottom: 0;
   width: var(--border-w);
-  background: url("../img/border-left.jpg") center top / 100% auto repeat-y;
+  background: url("../img/border-dance.webp") center top / calc(100% - 12px) auto repeat-y;
   pointer-events: none;
 }
 .page::before { left: 0; border-right: 4px double var(--gold); }
@@ -57,15 +58,19 @@ h1, h2, h3 { font-weight: 400; }
 .inner {
   max-width: var(--content);
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 56px;
 }
 
-/* Book of Hours band under the header and above the footer */
-.band {
-  height: 78px;
-  background: url("../img/border-bottom.jpg") center / cover no-repeat;
-  border-top: 1px solid var(--gold);
-  border-bottom: 1px solid var(--gold);
+/* Red manuscript rule under the header; Vostre panel as a frieze above the footer */
+.rule { height: 7px; border-top: 2px solid var(--rubric); border-bottom: 1px solid var(--rubric); }
+.frieze {
+  display: block;
+  width: 100%;
+  height: clamp(110px, 11vw, 180px);
+  object-fit: contain;
+  padding: 10px 0;
+  border-top: 2px solid var(--rubric);
+  border-bottom: 2px solid var(--rubric);
 }
 
 /* ---------- Header ---------- */
@@ -120,7 +125,7 @@ h1, h2, h3 { font-weight: 400; }
   align-items: flex-start;
   font-family: var(--font-display);
   color: var(--rubric);
-  font-size: clamp(3.1rem, 6vw, 5.4rem);
+  font-size: clamp(3.1rem, 5.4vw, 6.4rem);
   line-height: .92;
 }
 .title .dropcap { flex: none; width: 2.4em; margin: -.12em .05em 0 -.4em; }
@@ -266,10 +271,12 @@ figcaption { margin-top: 8px; font-size: .92rem; font-style: italic; text-align:
 @media (max-width: 760px) {
   :root { --border-w: 26px; }
   body { font-size: 1.12rem; background-size: 700px; }
+  .page::before, .page::after { background-size: 100% auto; }
   .page::before { border-right-width: 3px; }
   .page::after { border-left-width: 3px; }
   .inner { padding: 0 12px; }
-  .band { height: 46px; }
+  .rule { height: 6px; }
+  .frieze { height: auto; padding: 6px 0; }
 
   .site-header { display: grid; grid-template-columns: 1fr auto; gap: 8px 12px; padding: 14px 0 10px; }
   .home-link { font-size: 1.3rem; }
