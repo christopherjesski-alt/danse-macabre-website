@@ -2,10 +2,14 @@
 //  DONOR WALL. Updated automatically every 6 hours from GoFundMe.
 //  tier: child | laborer | chambermaid | clerk | friar | merchant | cure | hermit | death
 //  Tier is set by total amount given: child $10, laborer $25, chambermaid $50,
-//  clerk $100, friar $150, merchant $200, cure $350, hermit $600, death $1,000.
+//  clerk $100, friar $150, merchant $200, cure $300, hermit $400, death $1,000.
 //  Never delete entries; only add new supporters or move someone UP a tier.
 // ============================================================
 window.DONORS = [
+  { name: "Tim and Joanne Oyer", tier: "death" },
+  { name: "Adrianne and Ted Hewlett", tier: "death" },
+  { name: "Jack Hewlett", tier: "hermit" },
+  { name: "Sarah Perkin", tier: "merchant" },
   { name: "Catherine Fazio", tier: "merchant" },
   { name: "Adrianne Hewlett", tier: "merchant" },
   { name: "Nancy Barricklo", tier: "friar" },
