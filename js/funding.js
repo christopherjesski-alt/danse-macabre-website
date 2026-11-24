@@ -4,6 +4,6 @@
 //  raised = GoFundMe total + $4,000 raised before the GoFundMe launched.
 // ============================================================
 window.FUNDING = {
-  raised: 5185,
+  raised: 5535,
   goal: 10000
 };
