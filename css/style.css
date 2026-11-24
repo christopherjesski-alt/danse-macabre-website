@@ -634,3 +634,15 @@ figcaption { margin-top: 8px; font-size: .92rem; font-style: italic; text-align:
 .rewards-link { margin: -18px auto 30px; max-width: 40em; text-align: center; font-family: var(--font-display); font-style: italic; font-size: 1.2rem; color: var(--ink-soft); }
 .rewards-link .more { font-size: 1.2rem; }
 
+
+/* ---------- Team: cast portraits ---------- */
+.cast-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; margin-top: 8px; }
+.cast-card .arch { max-width: 300px; margin: 0 0 20px; }
+.cast-card .arch img { filter: sepia(.12) saturate(.88); }
+.cast-role { margin: 0; font-family: var(--font-display); font-style: italic; font-size: 1.3rem; color: var(--rubric); }
+.cast-name { margin: 0 0 10px; font-family: var(--font-display); font-size: 1.9rem; line-height: 1.15; }
+.cast-bio { margin: 0; font-size: 1.06rem; line-height: 1.55; }
+.cast-grid + .aside { margin-top: 28px; }
+@media (max-width: 1000px) { .cast-grid { gap: 32px; } }
+@media (max-width: 760px) { .cast-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; } .cast-card .arch { max-width: 260px; } }
+
