@@ -23,7 +23,8 @@ window.DONORS = [
   { name: "Max Gallen", tier: "chambermaid" },
   { name: "Taylor Bryan", tier: "laborer" },
   { name: "Amanda O’Donnell", tier: "laborer" },
-  { name: "Alexander Cooney", tier: "laborer" }
+  { name: "Alexander Cooney", tier: "laborer" },
+  { name: "Alex Gould", tier: "cure" }
 ];
 window.REWARD_LIMITS = { villagers: 5, zombies: 15 };
 window.REWARD_FORM_URL = ""; // paste the Google Form link here; empty hides the form link
